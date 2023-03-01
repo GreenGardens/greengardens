@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Green Gardens</title>
+	<style>
+		body {
+      cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
+			background-image: url("https://i.ibb.co/WnQTML3/website-background-4.jpg");
+			background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		  background-position: center;
+		  height: 100%;
+			font-family: Baskerville, serif;
+			color: 	#CC0000;
+			margin: 0;
+		}
+
+		.background {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: url("https://i.ibb.co/WnQTML3/website-background-4.jpg");
+		  background-size: cover;
+		  background-position: top;
+		  z-index: -1;
+		}
+
+		.content {
+		  margin: 100px auto;
+		  max-width: 600px;
+		  text-align: center;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: -50px;
+			position: relative;
+		  z-index: 1;
+		}
+		a {
+  color: #C6E446;
+}
+    a:hover {
+    cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
+		}
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: -61px;
+			margin-left: 20px;
+		}
+		.logo img {
+			width: 400px;
+			height: auto;
+		}
+		.candle {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  position: absolute;
+		  top: 10%;
+		  transform: translateY(-50%);
+		  width: 100%;
+		}
+
+		.candle img {
+		  position: absolute;
+		  width: 50px;
+		  height: 80px;
+		}
+
+		.candle img:first-of-type {
+		  left: 90px;
+			top: 20px;
+		}
+
+		.candle img:last-of-type {
+		  left: 610px;
+			top: 20px;
+  	}
+
+		.menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.menu a {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 20px;
+			text-decoration: none;
+			color: #CC0000;
+			font-family: Baskerville, serif;
+			text-transform: none;
+			letter-spacing: 2px;
+			transition: all 0.2s ease-in-out;
+		}
+		.menu a:hover {
+			color: #f00;
+			transform: scale(1.1);
+		}
+		.event-box {
+			background-color: rgba(61, 71, 71 , 0.8);
+			width: 400px;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  border: 1px solid #ccc;
+			border-style: groove;
+			border-width: thick;
+			margin-top: 40px;
+		  margin-left: 180px;
+		  padding: 20px;
+		}
+		.event-title {
+		  font-size: 24px;
+		  margin: 0 0 10px;
+		}
+
+		.event-date {
+		  margin: 0 0 10px;
+		}
+
+		.event-venue,
+		.event-location {
+		  margin: 0 0 10px;
+		}
+
+		.buy-tickets-link {
+		  display: inline-block;
+		  padding: 10px;
+		  background-color: #CC0000;
+		  color: #fff;
+		  text-decoration: none;
+		  margin: 0 10px 0 0;
+		}
+
+		.sold-out-text {
+		  color: #999;
+		  font-style: italic;
+		}
+
+		}
+	</style>
+</head>
+<body>
+	<body>
+  <div class="background"></div>
+  <div class="content"></div>
+	<div class="intro-animation"></div>
+	<div class="container">
+		<div class="logo">
+			<a href="#" id="logo"><img src="https://i.ibb.co/dt38GX7/GG-logo-png.png" alt="Logo"></a>
+		</div>
+		<audio id="bg-audio" src="https://dl.sndup.net/dnzf/GG%20website%20homepage%20audio.mp3" loop></audio>
+		<div class="candle">
+			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
+			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
+		</div>
+		<div class="menu">
+			<a href="https://greengardens.github.io/greengardens/">Home</a>
+			<a href="https://greengardens.github.io/greengardens/music">Music</a>
+			<a href="https://greengardensmusic.bandcamp.com/merch">Merch</a>
+			<a href="https://greengardens.github.io/greengardens/live">Live</a>
+			<a href="https://greengardens.github.io/greengardens/contact">Contact</a>
+		</div>
+			<div class="event-box">
+			  <div class="event-info">
+			    <h2 class="event-title">Febueder + Green Gardens & Wino</h2>
+			    <p class="event-date">Friday 3rd March 2023</p>
+			    <p class="event-venue">Headrow House</p>
+			    <p class="event-location">Leeds, United Kingdom</p>
+			    <a href="#" class="https://www.seetickets.com/event/febueder/33-oldham-street/2487560?aff=id1bandsintown">Buy Tickets</a>
+			    <p class="sold-out-text"></p>
+			  </div>
+			</div>
+			<div class="event-box">
+			  <div class="event-info">
+			    <h2 class="event-title">Long Division Festival</h2>
+			    <p class="event-date">Saturday 10th June 2023</p>
+			    <p class="event-venue">Wakefield City Centre</p>
+			    <p class="event-location">Wakefield, United Kingdom</p>
+			    <a href="#" class="https://www.seetickets.com/tour/long-division-festival-2023">Buy Tickets</a>
+			    <p class="sold-out-text"></p>
+			  </div>
+		</div>
+
+
+</div>
+    <h1></h1>
+	</div>
+
+	</div>
+
+	</div>
+
+	<script>
+		// Get the logo element
+		const logo = document.getElementById('logo');
+
+		// Get the audio element
+		const audio = document.getElementById('bg-audio');
+
+		// Add a click event listener to the logo element
+		logo.addEventListener('click', () => {
+			// Play the audio
+			audio.play();
+		});
+	</script>
+<script>
+var bg = document.querySelector('.background');
+var speed = -0.55;
+
+window.addEventListener('scroll', function() {
+  var offset = window.pageYOffset;
+  bg.style.backgroundPositionY = offset * speed + 'px';
+});
+	</script>
+
+</body>
