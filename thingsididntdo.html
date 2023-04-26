@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Green Gardens</title>
+	<style>
+		body {
+      cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
+			background-image: url("https://i.ibb.co/yXRY97X/website-background-TIDD-v2.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Baskerville, serif;
+			color: 	#CC0000;
+			margin: 0;
+			animation: bgscroll 30s linear infinite;
+		}
+
+		@keyframes bgscroll {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 0 -2300px;
+			}
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			position: relative;
+			z-index: 1;
+		}
+    a:hover {
+    cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
+    }
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+		}
+		.logo img {
+			width: 400px;
+			height: auto;
+		}
+		.candle {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  position: absolute;
+		  top: 10%;
+		  transform: translateY(-50%);
+		  width: 100%;
+		}
+
+		.candle img {
+		  position: absolute;
+		  width: 50px;
+		  height: 80px;
+		}
+
+		.candle img:first-of-type {
+		  left: 100px;
+			top: 40px;
+		}
+
+		.candle img:last-of-type {
+		  left: 620px;
+			top: 40px;
+  	}
+
+		.menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			margin-left: 1000px
+		}
+		.menu a {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 20px;
+			text-decoration: none;
+			color: #CC0000;
+			font-family: Baskerville, serif;
+			text-transform: none;
+			letter-spacing: 2px;
+			transition: all 0.2s ease-in-out;
+		}
+		.menu a:hover {
+			color: #f00;
+			transform: scale(1.1);
+		}
+		.band-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.band-image img {
+			width: 40%;
+			height: auto;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+			margin-top: 400px;
+		}
+		.spotify-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		.youtube-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+		<div class="youtube-embed">
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/DglkFXfGs4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+</div>
+<div class="menu">
+	<a href="https://greengardens.github.io/greengardens/">Home</a>
+</div>
+	<script>
+		// Get the logo element
+		const logo = document.getElementById('logo');
+
+		// Get the audio element
+		const audio = document.getElementById('bg-audio');
+
+		// Add a click event listener to the logo element
+		logo.addEventListener('click', () => {
+			// Play the audio
+			audio.play();
+		});
+	</script>
+</body>
