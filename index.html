@@ -94,12 +94,48 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 50px;
+			margin-top: 15px;
 		}
 		.band-image img {
 			width: 40%;
 			height: auto;
 			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+			margin-top: 0px;
+		}
+		.spotify-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		.youtube-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		.text {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+			}
+			.text a {
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0 20px;
+				text-decoration: none;
+				color: #b3d1ff;
+				font-family: Baskerville, serif;
+				text-transform: lowercase;
+				letter-spacing: 2px;
+				transition: all 0.2s ease-in-out;
+			}
+			.text a:hover {
+				color: #f00;
+				transform: scale(1.1);
+
 		}
 	</style>
 </head>
@@ -119,12 +155,17 @@
 			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">Merch</a>
 			<a href="https://greengardens.github.io/greengardens/live">Live</a>
 			<a href="https://greengardens.github.io/greengardens/contact">Contact</a>
+	</div>
+	  <div class="text">
+			<a href="https://greengardens.github.io/greengardens/thingsididntdo">New Music Video "Things I Didn't Do" watch here</a>
 		</div>
 		<div class="band-image">
 			<img src="https://i.ibb.co/18R7y45/1998-CAM-2023-03-27-13-35-10-FN.jpgg" alt="Band">
 		</div>
-	</div>
 
+		<div class="spotify-embed">
+<iframe style="border: 0; width: 30%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3668831362/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://greengardensmusic.bandcamp.com/track/things-i-didnt-do">Things I Didn&#39;t Do by Green Gardens</a></iframe>
+	</div>
 	<script>
 		// Get the logo element
 		const logo = document.getElementById('logo');
