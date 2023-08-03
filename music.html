@@ -4,22 +4,44 @@
 	<title>Green Gardens</title>
 	<style>
 		body {
-      cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
-			background-image: url("https://i.ibb.co/xGMT3Tb/website-background-5.jpg");
-			background-size: cover;
-			background-attachment: fixed;
-			background-position: center;
+			cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
+			background-image: url("https://i.ibb.co/6Jhh2zz/website-background-6.jpg");
+			background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		  background-position: center;
+		  height: 100%;
 			font-family: Baskerville, serif;
 			color: 	#CC0000;
 			margin: 0;
 		}
 
+		.background {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: url("https://i.ibb.co/6Jhh2zz/website-background-6.jpg");
+		  background-size: cover;
+		  background-position: top;
+		  z-index: -1;
+		}
+
+		.content {
+		  margin: 100px auto;
+		  max-width: 600px;
+		  text-align: center;
+		}
 		.container {
 			max-width: 800px;
 			margin: 0 auto;
-			padding: 20px;
+			padding: -50px;
 			position: relative;
 		  z-index: 1;
+		}
+		a {
+			color: #C6E446;
 		}
     a:hover {
     cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
@@ -28,10 +50,10 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 20px;
+			margin-top: 2px;
 		}
 		.logo img {
-			width: 400px;
+			width: 500px;
 			height: auto;
 		}
 		.candle {
@@ -62,7 +84,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 50px;
+			margin-top: 0px;
 		}
 		.menu a {
 			font-size: 24px;
@@ -87,6 +109,7 @@
 			border-left-style: groove;
 			border-right-style: groove;
 			border-width: thick;
+		  flex-direction: row;
       margin-bottom: 20px;
 			margin-top: 80px;
     }
@@ -142,10 +165,13 @@
 	</style>
 </head>
 <body>
+	<body>
+	<div class="background"></div>
+  <div class="content"></div>
 	<div class="intro-animation"></div>
 	<div class="container">
 		<div class="logo">
-			<a href="#" id="logo"><img src="https://i.ibb.co/dt38GX7/GG-logo-png.png" alt="Logo"></a>
+			<a href="#" id="logo"><img src="https://i.ibb.co/2d0c8gg/Sequence-01.gif" alt="Logo"></a>
 		</div>
 		<audio id="bg-audio" src="https://dl.sndup.net/dnzf/GG%20website%20homepage%20audio.mp3" loop></audio>
 		<div class="candle">
@@ -153,11 +179,11 @@
 			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
 		</div>
 		<div class="menu">
-			<a href="https://greengardens.github.io/greengardens/">Home</a>
-			<a href="https://greengardens.github.io/greengardens/music">Music</a>
-			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">Merch</a>
-			<a href="https://greengardens.github.io/greengardens/live">Live</a>
-			<a href="https://greengardens.github.io/greengardens/contact">Contact</a>
+			<a href="https://greengardens.github.io/greengardens/">home</a>
+			<a href="https://greengardens.github.io/greengardens/music">music</a>
+			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">merch</a>
+			<a href="https://greengardens.github.io/greengardens/live">live</a>
+			<a href="https://greengardens.github.io/greengardens/contact">contact</a>
 		</div>
 		<h1></h1>
 		<div class="album">
@@ -201,8 +227,8 @@
 				<span class="track-length"></span>
 			</div>
 			<div class="track">
-				<span class="track-name"></span>
-				<span class="track-length"></span>
+				<span class="track-name">Oslow</span>
+				<span class="track-length">4:26</span>
 			</div>
 			<div class="track">
 				<span class="track-name"></span>
@@ -325,5 +351,15 @@
 			// Play the audio
 			audio.play();
 		});
-	</script>
-</body>
+		</script>
+	<script>
+	var bg = document.querySelector('.background');
+	var speed = -0.55;
+
+	window.addEventListener('scroll', function() {
+	  var offset = window.pageYOffset;
+	  bg.style.backgroundPositionY = offset * speed + 'px';
+	});
+		</script>
+
+	</body>
