@@ -5,12 +5,22 @@
 	<style>
 		body {
       cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
-			background-image: url("https://i.ibb.co/Q62VPQ7/website-background-3.jpg");
-			background-size: auto;
-			background-position: top;
+			background-image: url("https://i.ibb.co/0JD2vyg/Website-draft-1-background-extended.jpg");
+			background-size: cover;
+			background-position: center;
 			font-family: Baskerville, serif;
 			color: 	#CC0000;
 			margin: 0;
+			animation: bgscroll 30s linear infinite;
+		}
+
+		@keyframes bgscroll {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 0 -2300px;
+			}
 		}
 
 		.container {
@@ -18,41 +28,11 @@
 			margin: 0 auto;
 			padding: 20px;
 			position: relative;
-		  z-index: 1;
+			z-index: 1;
 		}
-		a {
-  color: #C6E446;
-}
     a:hover {
     cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
     }
-		.intro-animation {
-		  position: fixed;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-			background-image: url("https://i.ibb.co/Q62VPQ7/website-background-3.jpg");
-			background-size: auto;
-			background-position: top;
-		  animation: intro 0.1s ease-in-out;
-			animation-iteration-count: 1;
-		}
-
-		@keyframes intro {
-		  0% {
-		    transform: scale(1);
-		    opacity: 1;
-		  }
-		  50% {
-		    transform: scale(1.1);
-		    opacity: 0.5;
-		  }
-		  100% {
-		    transform: scale(1);
-		    opacity: 0;
-		  }
-		}
 		.logo {
 			display: flex;
 			justify-content: center;
@@ -80,13 +60,13 @@
 		}
 
 		.candle img:first-of-type {
-		  left: 90px;
-			top: 100px;
+		  left: 100px;
+			top: 40px;
 		}
 
 		.candle img:last-of-type {
-		  left: 610px;
-			top: 100px;
+		  left: 620px;
+			top: 40px;
   	}
 
 		.menu {
@@ -110,35 +90,57 @@
 			color: #f00;
 			transform: scale(1.1);
 		}
-		.textbox {
-			  position: absolute;
-			  top: 400px;
-			  left:400px;
-			  width: 300px;
-			  height: 150px;
-			  padding: 20px;
-				color: #CC0000;
+		.band-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15px;
+		}
+		.band-image img {
+			width: 40%;
+			height: auto;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+			margin-top: 0px;
+		}
+		.spotify-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		.youtube-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		.text {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+			}
+			.text a {
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0 20px;
+				text-decoration: none;
+				color: #156A31;
 				font-family: Baskerville, serif;
-				text-transform: none;
+				text-transform: lowercase;
 				letter-spacing: 2px;
 				transition: all 0.2s ease-in-out;
+				text-align: center;
 			}
-			.textbox a:hover {
-				color: #B75828;
+			.text a:hover {
+				color: #f00;
 				transform: scale(1.1);
 
-			.textbox h2 {
-			  margin-top: 0;
-			}
-
-			.textbox p {
-			  margin-bottom: 0;
-			}
 		}
 	</style>
 </head>
 <body>
-	<div class="intro-animation"></div>
 	<div class="container">
 		<div class="logo">
 			<a href="#" id="logo"><img src="https://i.ibb.co/2d0c8gg/Sequence-01.gif" alt="Logo"></a>
@@ -154,22 +156,17 @@
 			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">merch</a>
 			<a href="https://greengardens.github.io/greengardens/live">live</a>
 			<a href="https://greengardens.github.io/greengardens/contact">contact</a>
+	</div>
+	  <div class="text">
+			<a href="https://greengardensmusic.bandcamp.com/album/this-is-not-your-fault-deluxe-2">"this is not your fault" digital deluxe edition out on april 3rd. pre-order here</a>
 		</div>
-		<div class="textbox">
-  <p>Contact</p>
-  <p><a href="https://mailchi.mp/f10635fd0f8b/ggmail?fbclid=IwAR3e7mrUuLiQPaUN6wxmNPdKlJaOw7-lCCANJ601a6WyrELenzmXHf5neKM" ">mailing list</a>
-  <p><a href="mailto:greengardensmusic@gmail.com" ">greengardensmusic@gmail.com</a>
-  <p>label: <a href="https://cpwmrecords.com/"" >come play with me records</a>
-	<p>press: <a href="mailto:jasmine@hanglands.com "" >jasmine@hanglands.com </a>
-	<p>live: <a href="mailto:varungovil290@gmail.com "" >varungovil290@gmail.com </a>
-</div>
-    <h1></h1>
-	</div>
+		<div class="band-image">
+			<img src="https://i.ibb.co/18R7y45/1998-CAM-2023-03-27-13-35-10-FN.jpgg" alt="Band">
+		</div>
 
+		<div class="spotify-embed">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1ceaoaAV3xwVt69PLWcFef?utm_source=generator" width="500" height="102" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 	</div>
-
-	</div>
-
 	<script>
 		// Get the logo element
 		const logo = document.getElementById('logo');
