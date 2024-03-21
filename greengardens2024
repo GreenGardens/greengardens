@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Green Gardens</title>
+	<style>
+		body {
+			cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
+			background-image: url("https://i.ibb.co/qCGQvJx/website-background-7.jpg");
+			background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		  background-position: center;
+		  height: 100%;
+			font-family: Baskerville, serif;
+			color: 	#CC0000;
+			margin: 0;
+		}
+
+		.background {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: url("https://i.ibb.co/qCGQvJx/website-background-7.jpg");
+		  background-size: cover;
+		  background-position: top;
+		  z-index: -1;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			position: relative;
+			z-index: 1;
+		}
+    a:hover {
+    cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
+    }
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2px;
+		}
+		.logo img {
+			width: 500px;
+			height: auto;
+		}
+		.candle {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  position: absolute;
+		  top: 10%;
+		  transform: translateY(-50%);
+		  width: 100%;
+		}
+
+		.candle img {
+		  position: absolute;
+		  width: 50px;
+		  height: 80px;
+		}
+
+		.candle img:first-of-type {
+		  left: 100px;
+			top: 40px;
+		}
+
+		.candle img:last-of-type {
+		  left: 620px;
+			top: 40px;
+  	}
+
+		.menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0px;
+		}
+		.menu a {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 20px;
+			text-decoration: none;
+			color: #CC0000;
+			font-family: Baskerville, serif;
+			text-transform: none;
+			letter-spacing: 2px;
+			transition: all 0.2s ease-in-out;
+		}
+		.menu a:hover {
+			color: #f00;
+			transform: scale(1.1);
+		}
+		.band-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15px;
+		}
+		.band-image img {
+			width: 40%;
+			height: auto;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+			margin-top: 0px;
+		}
+		.spotify-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		.youtube-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		.text {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+				margin-left: 60px;
+				margin-right: 60px;
+			}
+			.text a {
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0 20px;
+				text-decoration: none;
+				color: #156A31;
+				font-family: Baskerville, serif;
+				text-transform: lowercase;
+				letter-spacing: 2px;
+				transition: all 0.2s ease-in-out;
+				text-align: center;
+			}
+			.text a:hover {
+				color: #f00;
+				transform: scale(1.1);
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<a href="#" id="logo"><img src="https://i.ibb.co/2d0c8gg/Sequence-01.gif" alt="Logo"></a>
+		</div>
+		<audio id="bg-audio" src="https://dl.sndup.net/dnzf/GG%20website%20homepage%20audio.mp3" loop></audio>
+		<div class="candle">
+			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
+			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
+		</div>
+		<div class="menu">
+			<a href="https://greengardens.github.io/greengardens/">home</a>
+			<a href="https://greengardens.github.io/greengardens/music">music</a>
+			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">merch</a>
+			<a href="https://greengardens.github.io/greengardens/live">live</a>
+			<a href="https://greengardens.github.io/greengardens/contact">contact</a>
+	</div>
+</div>
+	<div class="band-image">
+		<img src="https://i.ibb.co/v3CHXjg/photo-for-press-page.jpg" alt="Band">
+	</div>
+	  <div class="text">
+			<h1>"GREEN GARDENS / SOFT-ROCK INDIE COLLECTIVE"</h1>
+			<p>Leeds&apos; Green Gardens craft a soft and intricate indie-rock sound, valuing tenderness and
+extremities in equal measure. Taking inspiration from experimental guitar music from the last
+two decades and wading with that into the water left disturbed by the likes of Sparklehorse
+and Big Thief, Green Gardens show a more kind, sympathetic face of indie music.
+Green Gardens&apos; debut album &apos;This Is Not Your Fault&apos; (released via Come Play With Me
+records in partnership with EMI North) was released to a positive critical reaction, selling out
+multiple shows on their corresponding UK tour as well as strong radio coverage from BBC
+6Music. Notable playlisting for the record includes Spotify&apos;s Fresh Finds, Fresh Finds Folk,
+We are Leeds, The Neu Playlist (DIY), Hot New Bands and Melomania, as well as Apple
+Music&apos;s New in Alternative and New in Rock. Recorded in Greenmount Studios with Leeds
+heavyweights Jamie Lockhart (Mi Mye, The Cribs) and Rob Slater (Yard Act, Carpet,
+Crake) the band tracked much of the album live, giving it the carnality and immediacy that
+was required to carry you through the near-linear path through loss and guilt.
+In 2024, Green Gardens have teamed up with Joel Johnston (Far Caspian) to make their
+sophomore album. In abandoning a familiar process and using the studio as a fifth member,
+the band continue into a space of real sonic experimentation, while still sitting on the base of
+honest, and warm songwriting.</p>
+		</div>
+		<div class="text">
+			<a href="https://soundcloud.com/greengardens/sets/green-gardens-album-demos">Listen: Green Gardens Album 2 demos</a>
+</div>
+	<div class="text">
+		<h3 class="text">On &apos;This Is Not Your Fault&apos;</h3>
+</div>
+		<p class="text">"A triumphant, artistic high" - 8/10, CLASH</p>
+</div>
+<p class="text">"Green Gardens have delivered a spectacular debut which feels wholly their own." - 4/5, Far Out Magazine</p>
+</div>
+<p class="text">"A unique and impressive debut" - 8/10, Gigwise</p>
+</div>
+<p class="text">"For all their clear musical prowess, Green Gardens seem to remember that music is above all about
+connection and emotion, about using that talent to make you feel something, and as for their debut album, well, I for one am feeling very good about that" - For The Rabbits</p>
+</div>
+<p class="text">Playlisting: Hot New Bands, Fresh Finds, Fresh Finds Folk, We are Leeds, Melomania, The Neu Playlist (DIY), Apple Music New in Alternative, Apple Music New in Rock</p>
+</div>
+<p class="text">Radio support: BBC 6Music (Steve Lamacq, Emily Pilbeam, Tom Robinson), Amazing Radio, Radio X (John Kennedy)</p>
+</div>
+		<div class="text">
+			<h3>Social Media:</h3>
+			<br>
+			<a href="https://www.instagram.com/greengardensmusic">Instagram</a>
+			<br>
+			<a href="https://twitter.com/grngrdns">X (Twitter)</a>
+			<br>
+			<a href="https://www.facebook.com/GreenGardensBand">Facebook</a>
+</div>
+<div class="text">
+	<h3>Listen</h3>
+	<br>
+	<a href="https://open.spotify.com/artist/5EwUOG0SThYLLXclwy1PiO?si=UXdwxnBzSXaJdNDDFK0CSA">Spotify</a>
+	<br>
+	<a href="https://www.youtube.com/watch?app=desktop&v=DglkFXfGs4k&ab_channel=GreenGardens">Youtube</a>
+	<br>
+	<a href="https://greengardensmusic.bandcamp.com/album/this-is-not-your-fault">Bandcamp</a>
+	<br>
+	<a href="https://soundcloud.com/greengardens">Soundcloud</a>
+	<br>
+	<a href="https://soundcloud.com/greengardens/sets/green-gardens-album-demos">2024 Demos</a>
+</div>
+<script>
+		// Get the logo element
+		const logo = document.getElementById('logo');
+
+		// Get the audio element
+		const audio = document.getElementById('bg-audio');
+
+		// Add a click event listener to the logo element
+		logo.addEventListener('click', () => {
+			// Play the audio
+			audio.play();
+		});
+	</script>
+	<script>
+			// Replace apostrophes with HTML entity &apos;
+			document.body.innerHTML = document.body.innerHTML.replace(/'/g, '&apos;');
+	</script>
+</body>
