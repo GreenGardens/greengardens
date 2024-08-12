@@ -3,12 +3,13 @@
 <head>
 	<title>Green Gardens</title>
 	<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 		body {
       cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
-			background-image: url("https://i.ibb.co/0JD2vyg/Website-draft-1-background-extended.jpg");
+  		background-image: url('https://raw.githubusercontent.com/GreenGardens/greengardens/main/IMAG0040.JPG');
 			background-size: cover;
 			background-position: center;
-			font-family: Baskerville, serif;
+			font-family: "Manrope", sans-serif;
 			color: 	#CC0000;
 			margin: 0;
 			animation: bgscroll 30s linear infinite;
@@ -22,11 +23,21 @@
 				background-position: 0 -2300px;
 			}
 		}
-
+		.manrope {
+		  font-family: "Manrope", sans-serif;
+		  font-optical-sizing: auto;
+		  font-weight: 200;
+		  font-style: normal;
+		}
+		.content {
+		  margin: 100px auto;
+		  max-width: 600px;
+		  text-align: center;
+		}
 		.container {
 			max-width: 800px;
 			margin: 0 auto;
-			padding: 20px;
+			padding: -50px;
 			position: relative;
 			z-index: 1;
 		}
@@ -37,38 +48,13 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-top: 2px;
+			margin-top: 50px;
+			margin-left: -300px;
 		}
 		.logo img {
 			width: 500px;
 			height: auto;
 		}
-		.candle {
-		  display: flex;
-		  justify-content: space-between;
-		  align-items: center;
-		  position: absolute;
-		  top: 10%;
-		  transform: translateY(-50%);
-		  width: 100%;
-		}
-
-		.candle img {
-		  position: absolute;
-		  width: 50px;
-		  height: 80px;
-		}
-
-		.candle img:first-of-type {
-		  left: 100px;
-			top: 40px;
-		}
-
-		.candle img:last-of-type {
-		  left: 620px;
-			top: 40px;
-  	}
-
 		.menu {
 			display: flex;
 			justify-content: center;
@@ -77,12 +63,11 @@
 		}
 		.menu a {
 			font-size: 24px;
-			font-weight: bold;
+			font-weight: #200;
 			margin: 0 20px;
 			text-decoration: none;
 			color: #CC0000;
-			font-family: Baskerville, serif;
-			text-transform: none;
+			font-family: "Manrope", sans-serif;
 			letter-spacing: 2px;
 			transition: all 0.2s ease-in-out;
 		}
@@ -97,7 +82,7 @@
 			margin-top: 15px;
 		}
 		.band-image img {
-			width: 40%;
+			width: 20%;
 			height: auto;
 			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 			margin-top: 0px;
@@ -127,7 +112,7 @@
 				margin: 0 20px;
 				text-decoration: none;
 				color: #156A31;
-				font-family: Baskerville, serif;
+				font-family: "Manrope", sans-serif;
 				text-transform: lowercase;
 				letter-spacing: 2px;
 				transition: all 0.2s ease-in-out;
@@ -143,12 +128,9 @@
 <body>
 	<div class="container">
 		<div class="logo">
-			<a href="#" id="logo"><img src="https://i.ibb.co/2d0c8gg/Sequence-01.gif" alt="Logo"></a>
+			<a href="#" id="logo"><img src='https://raw.githubusercontent.com/GreenGardens/greengardens/main/GG%20LOGO%202%20WHITE.png' alt="Logo"></a>
 		</div>
 		<audio id="bg-audio" src="https://dl.sndup.net/dnzf/GG%20website%20homepage%20audio.mp3" loop></audio>
-		<div class="candle">
-			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
-			<img src="https://i.ibb.co/Sr4P4Kc/animated-candle-image-0093.gif" alt="Candle">
 		</div>
 		<div class="menu">
 			<a href="https://greengardens.github.io/greengardens/">home</a>
