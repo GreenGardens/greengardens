@@ -49,7 +49,6 @@
 			justify-content: center;
 			align-items: center;
 			margin-top: 50px;
-			margin-left: -300px;
 		}
 		.logo img {
 			width: 500px;
@@ -91,7 +90,31 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-bottom: 50px;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0px;
+		}
+
+		.social-icons a {
+			margin: 0 10px; /* Adjust spacing between icons */
+			display: inline-block;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		.social-icons a:hover {
+			transform: scale(1.2); /* Slight zoom on hover */
+			opacity: 0.8;
+		}
+
+		.social-icons img {
+			width: 30px; /* Adjust the size of icons */
+			height: 30px; /* Maintain proportions */
+			border-radius: 50%; /* Rounded appearance */
 		}
 		.youtube-embed {
 			display: flex;
@@ -121,6 +144,15 @@
 			.text a:hover {
 				color: #f00;
 				transform: scale(1.1);
+				.social-icons {
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  margin-top: 50px;
+				  padding: 20px;
+				  background-color: rgba(0, 0, 0, 0.7); /* Add background for better contrast */
+				  border-top: 2px solid #CC0000; /* Optional styling */
+				}
 
 		}
 	</style>
@@ -143,11 +175,28 @@
 			<a href="https://greengardensmusic.bandcamp.com/album/this-is-not-your-fault-deluxe-2">"this is not your fault" digital deluxe edition out now.</a>
 		</div>
 		<div class="band-image">
-			<img src="https://raw.githubusercontent.com/GreenGardens/greengardens/main/press_5_720.jpg" alt="Band">
+			<img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/Press%205.jpg" alt="Band">
 		</div>
 
 		<div class="spotify-embed">
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1ceaoaAV3xwVt69PLWcFef?utm_source=generator" width="500" height="102" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	</div>
+	<div class="social-icons">
+		<a href="https://www.instagram.com/greengardensmusic/" target="_blank" aria-label="Instagram">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/instagram.png" alt="Instagram" />
+	  </a>
+	  <a href="https://x.com/grngrdns" target="_blank" aria-label="Twitter">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/twitter%202.png" alt="Twitter" />
+	  </a>
+		<a href="https://open.spotify.com/artist/5EwUOG0SThYLLXclwy1PiO" target="_blank" aria-label="Spotify">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/spotify.png" alt="Instagram" />
+	  </a>
+		<a href="https://music.apple.com/us/artist/green-gardens/1358535593" target="_blank" aria-label="Apple Music">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/applemusic.png" alt="Instagram" />
+	  </a>
+		<a href="https://greengardensmusic.bandcamp.com" target="_blank" aria-label="Bnadcamp">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/bandcamp.png" alt="Instagram" />
+	  </a>
 	</div>
 	<script>
 		// Get the logo element
