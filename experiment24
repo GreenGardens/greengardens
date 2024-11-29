@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Green Gardens</title>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+	html, body {
+			height: 100%;
+			margin: 0;
+			overflow: hidden; /* Ensures no unwanted scrollbars */
+		}
+
+		body {
+      cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
+			background-image: url('https://i.ibb.co/5s0d5Dm/crack-ig-rip-upscaled.pg');
+			background-size: 100% 100%; /* Stretches the image to fit */
+			background-position: contain; /* Center the image */
+			background-repeat: no-repeat; /* Prevent tiling */
+			font-family: "Manrope", sans-serif;
+			color: 	#CC0000;
+			margin: 0;
+			background-color: black;
+      overflow-x: hidden;
+
+		}
+		#parallax {
+		    position: fixed; /* Sticks to the background */
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100vh; /* Full viewport height */
+		    z-index: -1; /* Pushes it behind all other elements */
+		    overflow: hidden;
+		}
+
+		/* Parallax Layers */
+		.layer {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    background-position: center;
+		    transition: transform 0.1s ease-out;
+		}
+
+		/* Content Above Parallax */
+		.content {
+		    position: relative; /* Ensure it respects z-index stacking */
+		    z-index: 10; /* Higher than the parallax */
+		    text-align: center;
+		    padding: 20px;
+		    color: #CC0000; /* Adjust content styling */
+		    font-family: "Manrope", sans-serif;
+		}
+		        /* Example layers with unique images */
+		        .layer:nth-child(1) {
+		            background-image: url('https://i.ibb.co/vVGkncf/Layer-1.pg'); /* Replace with your image */
+		        }
+
+		        .layer:nth-child(2) {
+		            background-image: url('https://i.ibb.co/3MKCzQP/Lettuce.png'); /* Replace with your image */
+		        }
+
+		        .layer:nth-child(3) {
+		            background-image: url('https://i.ibb.co/LkKzVC3/Sauce.png'); /* Replace with your image */
+		        }
+		.manrope {
+		  font-family: "Manrope", sans-serif;
+		  font-optical-sizing: auto;
+		  font-weight: 200;
+		  font-style: normal;
+		}
+		.content {
+		  margin: 100px auto;
+		  max-width: 600px;
+		  text-align: center;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: -50px;
+			position: relative;
+			z-index: 1;
+		}
+    a:hover {
+    cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
+    }
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.logo img {
+			width: 500px;
+			height: auto;
+		}
+		.menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0px;
+		}
+		.menu a {
+			font-size: 24px;
+			font-weight: #200;
+			margin: 0 20px;
+			text-decoration: none;
+			color: #CC0000;
+			font-family: "Manrope", sans-serif;
+			letter-spacing: 2px;
+			transition: all 0.2s ease-in-out;
+		}
+		.menu a:hover {
+			color: #f00;
+			transform: scale(1.1);
+		}
+		.band-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15px;
+		}
+		.band-image img {
+			width: 40%;
+			height: auto;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+			margin-top: 0px;
+		}
+		.spotify-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0px;
+		}
+
+		.social-icons a {
+			margin: 0 10px; /* Adjust spacing between icons */
+			display: inline-block;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		.social-icons a:hover {
+			transform: scale(1.2); /* Slight zoom on hover */
+			opacity: 0.8;
+		}
+
+		.social-icons img {
+			width: 30px; /* Adjust the size of icons */
+			height: 30px; /* Maintain proportions */
+			border-radius: 50%; /* Rounded appearance */
+		}
+		.youtube-embed {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		.text {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+			}
+			.text a {
+				font-size: 18px;
+				font-weight: bold;
+				margin: 0 20px;
+				text-decoration: none;
+				color: #156A31;
+				font-family: "Manrope", sans-serif;
+				text-transform: lowercase;
+				letter-spacing: 2px;
+				transition: all 0.2s ease-in-out;
+				text-align: center;
+			}
+			.text a:hover {
+				color: #f00;
+				transform: scale(1.1);
+				.social-icons {
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  margin-top: 50px;
+				  padding: 20px;
+				  background-color: rgba(0, 0, 0, 0.7); /* Add background for better contrast */
+				  border-top: 2px solid #CC0000; /* Optional styling */
+				}
+
+		}
+	</style>
+</head>
+<body>
+    <div id="parallax">
+        <div class="layer" data-depth="0.2"></div>
+        <div class="layer" data-depth="0.5"></div>
+        <div class="layer" data-depth="0.8"></div>
+    </div>
+		<div class="logo">
+			<a href="#" id="logo"><img src='https://raw.githubusercontent.com/GreenGardens/greengardens/main/GG%20LOGO%202%20WHITE.png' alt="Logo"></a>
+		</div>
+		<audio id="bg-audio" src="https://dl.sndup.net/dnzf/GG%20website%20homepage%20audio.mp3" loop></audio>
+		</div>
+		<div class="menu">
+			<a href="https://greengardens.github.io/greengardens/">home</a>
+			<a href="https://greengardens.github.io/greengardens/music">music</a>
+			<a href="https://greengardensmusic.bandcamp.com/merch" target="_blank">merch</a>
+			<a href="https://greengardens.github.io/greengardens/live">live</a>
+			<a href="https://greengardens.github.io/greengardens/contact">contact</a>
+	</div>
+	  <div class="text">
+			<a href="https://greengardensmusic.bandcamp.com/album/this-is-not-your-fault-deluxe-2">"this is not your fault" digital deluxe edition out now.</a>
+		</div>
+		<div class="band-image">
+			<img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/Press%205.jpg" alt="Band">
+		</div>
+
+		<div class="spotify-embed">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1ceaoaAV3xwVt69PLWcFef?utm_source=generator" width="500" height="102" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	</div>
+	<div class="social-icons">
+		<a href="https://www.instagram.com/greengardensmusic/" target="_blank" aria-label="Instagram">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/instagram.png" alt="Instagram" />
+	  </a>
+	  <a href="https://x.com/grngrdns" target="_blank" aria-label="Twitter">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/twitter%202.png" alt="Twitter" />
+	  </a>
+		<a href="https://open.spotify.com/artist/5EwUOG0SThYLLXclwy1PiO" target="_blank" aria-label="Spotify">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/spotify.png" alt="Instagram" />
+	  </a>
+		<a href="https://music.apple.com/us/artist/green-gardens/1358535593" target="_blank" aria-label="Apple Music">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/applemusic.png" alt="Instagram" />
+	  </a>
+		<a href="https://greengardensmusic.bandcamp.com" target="_blank" aria-label="Bnadcamp">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/bandcamp.png" alt="Instagram" />
+	  </a>
+	</div>
+	<script>
+		// Get the logo element
+		const logo = document.getElementById('logo');
+
+		// Get the audio element
+		const audio = document.getElementById('bg-audio');
+
+		// Add a click event listener to the logo element
+		logo.addEventListener('click', () => {
+			// Play the audio
+			audio.play();
+		});
+		// script.js
+		document.addEventListener('mousemove', (event) => {
+		    const layers = document.querySelectorAll('.layer');
+		    const x = event.clientX / window.innerWidth;
+		    const y = event.clientY / window.innerHeight;
+
+		    layers.forEach((layer) => {
+		        const depth = layer.getAttribute('data-depth');
+		        const movementX = (x - 0.5) * depth * 50; // Adjust the multiplier for sensitivity
+		        const movementY = (y - 0.5) * depth * 50;
+
+		        layer.style.transform = `translate(${movementX}px, ${movementY}px)`;
+		    });
+		});
+	</script>
+</body>
