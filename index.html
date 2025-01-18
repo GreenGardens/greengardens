@@ -4,25 +4,68 @@
 	<title>Green Gardens</title>
 	<style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+	html, body {
+			height: 100%;
+			margin: 0;
+			overflow: hidden; /* Ensures no unwanted scrollbars */
+		}
+
 		body {
-      cursor: url('https://i.ibb.co/wYzK1VB/gg-website-cursor-small.png'), auto;
-  		background-image: url('https://raw.githubusercontent.com/GreenGardens/greengardens/main/IMAG0040.JPG');
-			background-size: cover;
-			background-position: center;
+			background-image: url('https://i.ibb.co/5s0d5Dm/crack-ig-rip-upscaled.pg');
+			background-size: 100% 100%; /* Stretches the image to fit */
+			background-position: contain; /* Center the image */
+			background-repeat: no-repeat; /* Prevent tiling */
 			font-family: "Manrope", sans-serif;
 			color: 	#CC0000;
 			margin: 0;
-			animation: bgscroll 30s linear infinite;
+			background-color: black;
+      overflow-x: hidden;
+
+		}
+		#parallax {
+		    position: fixed; /* Sticks to the background */
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100vh; /* Full viewport height */
+		    z-index: -1; /* Pushes it behind all other elements */
+		    overflow: hidden;
 		}
 
-		@keyframes bgscroll {
-			from {
-				background-position: 0 0;
-			}
-			to {
-				background-position: 0 -2300px;
-			}
+		/* Parallax Layers */
+		.layer {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background-size: cover;
+		    background-position: center;
+		    transition: transform 0.1s ease-out;
 		}
+
+		/* Content Above Parallax */
+		.content {
+		    position: relative; /* Ensure it respects z-index stacking */
+		    z-index: 10; /* Higher than the parallax */
+		    text-align: center;
+		    padding: 20px;
+		    color: #CC0000; /* Adjust content styling */
+		    font-family: "Manrope", sans-serif;
+		}
+		        /* Example layers with unique images */
+		        .layer:nth-child(1) {
+		            background-image: url('https://i.ibb.co/vVGkncf/Layer-1.pg'); /* Replace with your image */
+		        }
+
+		        .layer:nth-child(2) {
+		            background-image: url('https://i.ibb.co/3MKCzQP/Lettuce.png'); /* Replace with your image */
+		        }
+
+		        .layer:nth-child(3) {
+		            background-image: url('https://i.ibb.co/LkKzVC3/Sauce.png'); /* Replace with your image */
+		        }
 		.manrope {
 		  font-family: "Manrope", sans-serif;
 		  font-optical-sizing: auto;
@@ -40,9 +83,6 @@
 			padding: -50px;
 			position: relative;
 			z-index: 1;
-		}
-    a:hover {
-    cursor: url('https://i.ibb.co/4dFhvfw/gg-website-cursor-small-hover.png'), auto;
     }
 		.logo {
 			display: flex;
@@ -158,7 +198,11 @@
 	</style>
 </head>
 <body>
-	<div class="container">
+    <div id="parallax">
+        <div class="layer" data-depth="0.2"></div>
+        <div class="layer" data-depth="0.5"></div>
+        <div class="layer" data-depth="0.8"></div>
+    </div>
 		<div class="logo">
 			<a href="#" id="logo"><img src='https://raw.githubusercontent.com/GreenGardens/greengardens/main/GG%20LOGO%202%20WHITE.png' alt="Logo"></a>
 		</div>
@@ -209,6 +253,20 @@
 		logo.addEventListener('click', () => {
 			// Play the audio
 			audio.play();
+		});
+		// script.js
+		document.addEventListener('mousemove', (event) => {
+		    const layers = document.querySelectorAll('.layer');
+		    const x = event.clientX / window.innerWidth;
+		    const y = event.clientY / window.innerHeight;
+
+		    layers.forEach((layer) => {
+		        const depth = layer.getAttribute('data-depth');
+		        const movementX = (x - 0.5) * depth * 50; // Adjust the multiplier for sensitivity
+		        const movementY = (y - 0.5) * depth * 50;
+
+		        layer.style.transform = `translate(${movementX}px, ${movementY}px)`;
+		    });
 		});
 	</script>
 </body>
