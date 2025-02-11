@@ -50,7 +50,7 @@
 			font-weight: #200;
 			margin: 0 20px;
 			text-decoration: none;
-			color: #CC0000;
+			color: #ffffff;
 			font-family: "Manrope", sans-serif;
 			letter-spacing: 2px;
 			transition: all 0.2s ease-in-out;
@@ -62,7 +62,7 @@
 		.textbox {
 			  position: absolute;
 			  top: 400px;
-			  left:400px;
+			  left:600px;
 			  width: 300px;
 			  height: 150px;
 			  padding: 20px;
@@ -87,6 +87,32 @@
 				margin-left: 200px;
 			}
 		}
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0px;
+			text-align: center;
+			margin-top: 20px;
+			display: block;
+		}
+
+		.social-icons a {
+			margin: 0 10px; /* Adjust spacing between icons */
+			display: inline-block;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		.social-icons a:hover {
+			transform: scale(1.2); /* Slight zoom on hover */
+			opacity: 0.8;
+		}
+
+		.social-icons img {
+			width: 30px; /* Adjust the size of icons */
+			height: 30px; /* Maintain proportions */
+			border-radius: 50%; /* Rounded appearance */
+		}
 	</style>
 </head>
 <body>
@@ -106,16 +132,26 @@
 		</div>
 		<div class="textbox">
   <p>Contact</p>
-  <p><a href="https://mailchi.mp/f10635fd0f8b/ggmail?fbclid=IwAR3e7mrUuLiQPaUN6wxmNPdKlJaOw7-lCCANJ601a6WyrELenzmXHf5neKM" ">mailing list</a>
-  <p><a href="mailto:greengardensmusic@gmail.com" ">greengardensmusic@gmail.com</a>
-</div>
-    <h1></h1>
+  <p><a href="https://mailchi.mp/f10635fd0f8b/ggmail?fbclid=IwAR3e7mrUuLiQPaUN6wxmNPdKlJaOw7-lCCANJ601a6WyrELenzmXHf5neKM">mailing list</a>
+	  <p><a href="https://www.tinylibraryrecords.com/?srsltid=AfmBOooU0br2JJDpd93pPvE0wF2RIYVOQM8oZiDh5VfYnT3JbQirScw8">tiny library records</a>
+  <p><a href="mailto:greengardensmusic@gmail.com">greengardensmusic@gmail.com</a>
+	<div class="social-icons">
+		<a href="https://www.instagram.com/greengardensmusic/" target="_blank" aria-label="Instagram">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/instagram.png" alt="Instagram" />
+	  </a>
+		<a href="https://open.spotify.com/artist/5EwUOG0SThYLLXclwy1PiO" target="_blank" aria-label="Spotify">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/spotify.png" alt="Instagram" />
+	  </a>
+		<a href="https://music.apple.com/us/artist/green-gardens/1358535593" target="_blank" aria-label="Apple Music">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/apple%20music.png" alt="Instagram" />
+	  </a>
+		<a href="https://greengardensmusic.bandcamp.com" target="_blank" aria-label="Bandcamp">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/bandcamp.png" alt="Instagram" />
+		</a>
+		<a href="https://linktr.ee/greengardens" target="_blank" aria-label="Linktree">
+	    <img src="https://raw.githubusercontent.com/GreenGardens/greengardens/refs/heads/main/linktree-white-icon.png" alt="Instagram" />
+	  </a>
 	</div>
-
-	</div>
-
-	</div>
-
 	<script>
 		// Get the logo element
 		const logo = document.getElementById('logo');
