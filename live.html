@@ -182,9 +182,116 @@
 			<a href="https://greengardens.github.io/greengardens/contact">contact</a>
 		</div>
 	<div class="container">
+ChatGPT
+You said:
+On my website I have a songkick embed to show upcoming shows. When one clicks on a show it comes up with 403 forbidden on the songkick website. However if you refresh the page it loads as normal showing the event. Is there a way to fix it to make it not come up with the 403 forbidden page?
+ChatGPT said:
+Yes — this is a known issue that happens with Songkick widgets/embeds when the user clicks an event and Songkick receives an HTTP request without a proper referrer or with certain tracking parameters stripped. Many browsers, ad-blockers, and privacy settings now block referrers on iframe → top-level navigations, which causes Songkick to think the request is suspicious and return 403 Forbidden. Refreshing fixes it because the user is now already on songkick.com directly, so the referrer is no longer blocked.
+
+Below are the most reliable ways to fix or work around it.
+
+✅ How to Fix the Songkick Embed 403 Error
+1. Add referrerpolicy="no-referrer-when-downgrade" to the iframe
+Songkick’s embeds sometimes work better with a looser referrer policy.
+
+Try updating your iframe to include:
+
+<iframe 
+  src="https://widget.songkick.com/...your-info..."
+  referrerpolicy="no-referrer-when-downgrade"
+  width="100%" 
+  height="500" 
+  frameborder="0"
+></iframe>
+This allows the browser to send a normal referrer to Songkick when users click an event.
+
+2. Add sandbox="allow-top-navigation-by-user-activation"
+Some browsers block navigation from iframes unless explicitly allowed.
+
+Try adding:
+
+sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
+Full example:
+
+<iframe 
+  src="https://widget.songkick.com/...your-info..."
+  width="100%" 
+  height="500"
+  frameborder="0"
+  referrerpolicy="no-referrer-when-downgrade"
+  sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
+></iframe>
+This tells the browser: “Yes, the user is allowed to click a link and navigate out of the iframe.”
+
+3. Make sure the embed URL is HTTPS
+Songkick blocks mixed-content or downgraded requests.
+
+If your site is HTTPS but your embed uses HTTP, it can cause 403 on click.
+
+4. Wrap the widget link in a redirect
+If the 403 continues due to strict browser privacy settings, you can create a workaround such as:
+
+Your link → your site → Songkick.
+
+For example:
+
+/go-to-event?id=12345 → redirect → https://www.songkick.com/...
+
+This ensures the referrer is your own site, not the iframe.
+
+5. Confirm no extensions are interfering (AdBlock, uBlock, Brave)
+Some users will still see 403 if they use privacy-blocking browsers.
+You can’t fix that for everyone, but solutions #1 and #2 usually reduce the issue dramatically.
+
+📌 Most Effective Quick Fix
+Add both of these to your iframe:
+
+referrerpolicy="no-referrer-when-downgrade" 
+sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
+This resolves the issue for most visitors.
+
+If you want, I can look at your exact embed code and give you a corrected, copy-paste-ready version.
+
+You said:
+That's great, can you put the fixes into this code? div class="container">
 <a href="https://www.songkick.com/artists/5990974" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="off" data-background-color="rgb(0,0,0,1)" data-font-color="rgb(255,255,255,1)" data-button-bg-color="rgb(255,255,255,1)" data-button-text-color="rgb(0,0,0,1)" data-locale="en" data-other-artists="on" data-share-button="on" data-country-filter="on" data-rsvp="on" data-request-show="on" data-past-events="off"
 data-past-events-offtour="off" data-remind-me="off" ></a>	<script src='https://widget-app.songkick.com/injector/5990974'></script>
 </div>
+ChatGPT said:
+Here’s an updated version of your code with the referrerpolicy and sandbox fixes applied.
+
+Because Songkick’s “injector” script creates the iframe automatically, you can’t directly edit the iframe markup — but you can wrap the widget in a container iframe that provides the correct policies.
+This is the method that works reliably to prevent the 403 error.
+
+✅ Fixed Version (Iframe Wrapper + Songkick Widget Inside)
+<div class="container" style="width:100%; max-width:100%;">
+  <iframe 
+    srcdoc='
+      <a href="https://www.songkick.com/artists/5990974"
+        class="songkick-widget"
+        data-theme="dark"
+        data-track-button="on"
+        data-detect-style="off"
+        data-background-color="rgb(0,0,0,1)"
+        data-font-color="rgb(255,255,255,1)"
+        data-button-bg-color="rgb(255,255,255,1)"
+        data-button-text-color="rgb(0,0,0,1)"
+        data-locale="en"
+        data-other-artists="on"
+        data-share-button="on"
+        data-country-filter="on"
+        data-rsvp="on"
+        data-request-show="on"
+        data-past-events="off"
+        data-past-events-offtour="off"
+        data-remind-me="off"
+      ></a>
+      <script src="https://widget-app.songkick.com/injector/5990974"></script>
+    '
+    style="width:100%; height:600px; border:0;"
+    referrerpolicy="no-referrer-when-downgrade"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
+  ></iframe></div>
     <h1></h1>
 	</div>
 
